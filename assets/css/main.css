@@ -58,6 +58,7 @@ p{
 	font: inherit;
 	font-size: 1.25em;
 }
+
 mark {
 	background-color: transparent;
 	color: inherit;
@@ -103,7 +104,7 @@ input, select, textarea {
 
 	body {
 		background-color: #7ec3ee;
-		background-image: linear-gradient(rgba(255, 166, 0, 0.2), rgba(255, 255, 0, 0.2)), url("../../images/L_picture.jpg");
+		background-image: linear-gradient(rgba(255, 166, 0, 0.15), rgba(255, 255, 0, 0.15)), url("../../images/L_picture.jpg");
 
 		/*, -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 		 background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
@@ -3127,6 +3128,9 @@ input, select, textarea {
 					display: block;
 					margin: 0 auto;
 					max-width: 75%;
+					border: 1px solid;
+					border-radius: 50%;
+					padding: 2spx;
 				}
 
 		@media screen and (max-width: 1280px) {
@@ -3342,6 +3346,7 @@ input, select, textarea {
 		background-color: #ffffff;
 		color: #636363;
 		border-radius: 0.25em;
+		opacity: 0.9;
 	}
 
 		#main input, #main select, #main textarea {
