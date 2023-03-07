@@ -1,12 +1,19 @@
 var left = null;
+var centerPane = null;
 
 const handleOnMove = e => {
     while (left === null){
         left = document.getElementById("left-side");
     }
-    const p = e.clientX / window.innerWidth * 100;
+    var p = e.clientX / window.innerWidth * 100;
+    if (e.clientY > 1000){p=100}
+    if (p < 0.5){
+        p=0.0;
+    }
+    if (p > 99.5){
+        p=100;
+    }
     left.style.width = p+'%';
-    console.log(left.style.width)
 }
 
 document.onmousedown = e => {
