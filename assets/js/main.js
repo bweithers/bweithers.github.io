@@ -16,12 +16,12 @@ const handleOnClick = e => {
     handleOnMove(e);
 }
 const handleOnMove = e => {
-    if (lock != 0){return}
+    if (lock != 0){return;}
     while (left === null){
         left = document.getElementById("left-side");
     }
     var p = e.clientX / window.innerWidth * 100;
-    if (e.clientY > 1000){p=100}
+    if (e.clientY > 1000){p=100;}
     if (p < 0.5){
         p=0.0;
     }

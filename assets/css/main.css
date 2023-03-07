@@ -1,12 +1,12 @@
 :root {
-    --main-bg-color: #eee5e9;
+    --main-bg-color: #8D918D;
     --left-bg-color: #2B3A67;
     --right-bg-color: #66999B;
     --nav-bg-color: #CAD2C5;
   }
 
 body{
-    
+    background-color: var(--main-bg-color);
 }
 
 @keyframes background-pan{
@@ -18,7 +18,7 @@ body{
     }
 }
 #center-pane{
-    
+
 }
 #sides{
     position: relative;
@@ -28,14 +28,10 @@ body{
     padding: none;
     margin: none;
 }
-#sides .title{
-    color: white;
-    font-family: "Rubik", sans-serif;
-    font-size: 6vw;
-    margin: 0px vw;
-    width: 65vw;
-    
+div{
+    height: max-content;
 }
+
 .side{
     height: 100vw;
     width: 99%;
@@ -56,12 +52,13 @@ body{
     z-index: 1;
 }
 .text-holder{
-    background-color: red;
+    background-color: yellow;
     order: 10;
     width: 10vw;
     height: 10vw;
     z-index: 10;
-    color: red;
+    border: solid 1px --nav-bg-color;
+    border-radius: 5px;
 }
 .fancy{
     font-size: 1.3em;
@@ -79,6 +76,7 @@ body{
 a{
     text-decoration: none;
     color: inherit;
+    margin: auto;
 }
 nav{
     background-color: var(--nav-bg-color);
@@ -94,7 +92,56 @@ ul{
     align-items: center;
     list-style-type: none;
 }
-
 nav a:hover {
     color: black;
-  }
+}
+
+h1,h2,h3,p, .social-link{
+    font-family: "Rubik", sans-serif;
+    color: black;
+    /* margin: 5px; */
+    /* letter-spacing: 0.5px;
+    word-spacing: 5px;
+    line-height: 1.15;
+    white-space: nowrap;
+    padding: 5px; */ 
+}
+
+#sides .title{
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-size: 6vw;
+    margin: 0px vw;
+    width: 65vw;
+    
+}
+.social-link{
+    font-weight: bold;
+    font-size: 5rem;
+    margin: 5px;
+    padding: auto;
+}
+#screen{
+    width: 35vw;
+    border: 3px solid white;
+    z-index: 0;
+    aspect-ratio: 10 / 16;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+#screen > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+#About{
+    width: auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+h3, p{
+    align-self: center;
+}
