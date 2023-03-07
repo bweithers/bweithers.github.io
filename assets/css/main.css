@@ -1,14 +1,4 @@
-body {
-    min-height: 100vh;
-    background: #212534;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    box-sizing: border-box;
-  }
-.side, .title{
+.side .title{
     color: white;
     font-family: "Rubik", sans-serif;
     font-size: 8vw;
