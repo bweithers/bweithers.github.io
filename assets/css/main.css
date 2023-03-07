@@ -1,3 +1,7 @@
+body{
+    background-image: url();
+}
+
 .side .title{
     color: white;
     font-family: "Rubik", sans-serif;
@@ -31,3 +35,24 @@
     line-height: 0.8em;
     color: white;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
+nav{
+    background-color: lightblue;
+    width: 60vw;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+nav a:hover {
+    color: green;
+  }
