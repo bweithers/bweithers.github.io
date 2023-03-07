@@ -1,7 +1,22 @@
 var left = null;
 var centerPane = null;
+var lock = 0;
 
+const handleOnClick = e => {
+    if (e.target.id != 'right-side' && e.target.id != 'left-side'){
+        return;
+    }
+    lock = (lock+1)%3;
+    if (lock == 1){
+        document.getElementById("left-side").style.width = '100%';
+    }
+    if (lock == 2){
+        document.getElementById("left-side").style.width = '0%';
+    }
+    handleOnMove(e);
+}
 const handleOnMove = e => {
+    if (lock != 0){return}
     while (left === null){
         left = document.getElementById("left-side");
     }
@@ -17,7 +32,8 @@ const handleOnMove = e => {
 }
 
 document.onmousedown = e => {
-    handleOnMove(e);
+
+    handleOnClick(e);
 }
 
 document.onmousemove = e => {
