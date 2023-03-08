@@ -11,14 +11,15 @@
         <script src="https://kit.fontawesome.com/5df66e4d6b.js" crossorigin="anonymous"></script>
 		<script src="assets/js/main.js"></script>
 	</head>
-	
+
 	<body>
 		<div id="center-pane">
-			<nav>
-				<ul>
+			<nav id="topnav">
+				<ul id="navlist">
 					<li><a href="#About">About</a></li>
 					<li><a href="#Professional">Professional</a></li>
 					<li><a href="#Academic">Academic</a></li>
+					<li><a href=blog.html>Blog</a></li>
 				</ul>
 			</nav>
 			<div id="sides">
@@ -29,22 +30,39 @@
 					<h2 class="title">The horsepower of a <span class="fancy">Computer Scientist</span></h2>
 				</div>
 			</div>
-			<div class="text-holder" id="About">
-				<h3>About me</h3>
-				<p>Lorem Ipsum</p>
+			<div class="bot-section" id="about-section">
+				<div class="text-holder" id="about-text">
+					<h3>About me</h3>
+					<p>Salutations! I am a data professional based out of the Chicago area. I love Maths and Computers and finding ways to apply them elegantly to solve real world problems. I mostly use Python and SQL to perform data analysis and have worked with different visualization platforms like Microsoft PowerBI or Tableau. Part of my love for the tech industry comes from its willingness to not be too serious but to let the code speak for itself!</p>
+				</div>
 				<div id="screen">
 					<img src="/assets/images/gigachad.jpg">
 				</div>
 			</div>
-			<div class="text-holder" id="Professional">
-				<a class="social-link" href="#">Professional</a>
-				<p>This is another text holder</p>
+			<div class="bot-section" id="professional-section">
+				<div class="bot-header">
+					<a class="social-link" href="https://www.linkedin.com/in/brian-weithers/">Professional</a>
+					<a href ="assets/resume.pdf"><img id="resume-img" src="assets/images/undraw_resume_re_hkth.svg"></a>
+				</div>
+				<div class="bot-body">
+					<div class="text-holder" id="Professional">
+						<p>This is another text holder</p>
+					</div>
+					<div>
+						<img src="/assets/images/internlogo.png" alt="internlogo" id="intern-logo">
+					</div>
+				</div>
 			</div>
-			<div class="text-holder" id="Academic">
-				<a class="social-link" href="#">Academic</a>				
-				<p>This is another text holder</p>
+			<div class="bot-section" id="academic-section">
+				<div class="bot-header">
+					<a class="social-link" href="https://freeman.tulane.edu/graduate/master-business-analytics">Academic</a>				
+				</div>
+
+					<div class="text-holder" id="Academic">	
+						<p>This is another text holder</p>
+					</div>
+
 			</div>
 		</div>
 	</body>
-
-	</html>
+</html>

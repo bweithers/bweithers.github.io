@@ -4,6 +4,7 @@ var lock = 0;
 
 const handleOnClick = e => {
     if (e.target.id != 'right-side' && e.target.id != 'left-side'){
+        console.log(e.target.id);
         return;
     }
     lock = (lock+1)%3;
