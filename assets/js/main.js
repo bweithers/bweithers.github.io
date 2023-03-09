@@ -19,12 +19,26 @@ const handleOnClick = e => {
 }
 const handleOnMove = e => {
     if (lock != 0){return;}
+    
     while (left === null){
         left = document.getElementById("left-side");
+        sides = document.getElementById("sides")
+    
     }
-    var p = e.clientX / window.innerWidth * 100;
-    if (e.clientY > 1000){p=100;}
-    console.log(left.style.top + left.style.height);
+    // if (e.target.id != 'right-side' && e.target.id != 'left-side' && e.target.classList.value != 'fancy' && e.target.classList.value != 'title'){
+    // //   console.log(left.style.width);
+    // //   console.log(Number(left.style.width.replace('%','')));
+    // //   left.style.width = Math.round(Number(left.style.width))+'%';
+      
+    // //   // console.log(Math.round(Number(left.style.width))*100+'%');
+    //   return;
+    // }
+    const sides_rect = sides.getBoundingClientRect();
+    // var p = e.clientX / innerWindow.width * 100;
+    var p = (e.clientX - sides_rect.left) / (sides_rect.right - sides_rect.left) * 100;
+    // console.log(sides_rect.top, sides_rect.bottom, sides_rect.left, sides_rect.right);
+    // console.log(e.clientX, e.clientY);
+    //if (e.clientY > sides_rect.top || e.clientY < sides_rect.bottom || e.clientX < sides_rect.left || e.clientX > sides_rect.right){return;};
     if (p < 0.5){
         p=0.0;
     }
@@ -32,10 +46,10 @@ const handleOnMove = e => {
         p=100;
     }
     left.style.width = p+'%';
+    console.log(p+'%');
 }
 
 document.onmousedown = e => {
-
     handleOnClick(e);
 }
 
@@ -43,21 +57,8 @@ document.onmousemove = e => {
     handleOnMove(e);
 }
 
-document.ontouchmove = e => {
-    handleOnMove(e);
-}
-
-// document.getElementById("kwargs-link").onmouseover = event => {
-//     let iterations = 0;
-//     const interval = setInterval(() => {
-//         event.target.innerText = event.target.innerText.split("")
-//         .map(letter => letters[Math.floor(Math.random() * 26)])
-//         .join("");
-
-//         if (iterations++ >= 20) clearInterval(interval);
-//         iterations++;
-//     }
-//     ,50);
+// document.ontouchmove = e => {
+//     handleOnMove(e);
 // }
 
 
