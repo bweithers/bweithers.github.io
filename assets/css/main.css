@@ -162,7 +162,7 @@ h1,h2,h3,p,footer,.social-link{
     border-bottom: 2px dashed white;
     width: 100%;
 }
-.bot-header > h2{
+.bot-header > h2, a{
     text-align: center;
 }
 .bot-body{
@@ -221,4 +221,21 @@ footer > a{
     margin: 5px;
     padding: 5px;
     font-size: 1.0rem;
+}
+footer > p{
+    margin: 5px;
+    padding: 5px;
+    font-size: 1.0rem;
+    color: white;
+}
+
+#blog-link{
+    align-self: center;
+    font-family: "Rubik", sans-serif;
+    color: var(--text-color);
+    font-size: 2.5rem;
+}
+
+.bot-header{
+    border: 4px solid white;
 }
