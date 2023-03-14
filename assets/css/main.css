@@ -112,7 +112,6 @@ img{
     color: white;
     font-family: "Rubik", sans-serif;
     font-size: 6vw;
-    margin: 0px vw;
     width: 65vw;
     user-select: none;
     -webkit-user-select: none;
@@ -177,12 +176,10 @@ img{
     align-items: space-around;
     justify-content: space-around;
 }
-#intern-logo{
-    border: 5px solid white;
-    order: 10;
-}
+
 #resume-img{
     height: 100%;
+    width: 100%;
 }
 #professional-section, #academic-section{
     direction: flex;
@@ -223,7 +220,7 @@ footer{
 }
 footer > a{
     margin: 5px;
-    padding: 5px;
+    padding-top: 10px;
     font-size: 1.0rem;
 }
 footer > p{
