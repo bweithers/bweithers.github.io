@@ -1,123 +1,91 @@
-/*
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+var left = null;
+var centerPane = null;
+var lock = 0;
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-(function($) {
+const handleOnClick = e => {
+    if (e.target.id != 'right-side' && e.target.id != 'left-side'){
+        console.log(e.target.id);
+        return;
+    }
+    lock = (lock+1)%3;
+    if (lock == 1){
+        document.getElementById("left-side").style.width = '100%';
+    }
+    if (lock == 2){
+        document.getElementById("left-side").style.width = '0%';
+    }
+    handleOnMove(e);
+}
+const handleOnMove = e => {
+    if (lock != 0){return;}
+    
+    while (left === null){
+        left = document.getElementById("left-side");
+        sides = document.getElementById("sides")
+    
+    }
+    // if (e.target.id != 'right-side' && e.target.id != 'left-side' && e.target.classList.value != 'fancy' && e.target.classList.value != 'title'){
+    // //   console.log(left.style.width);
+    // //   console.log(Number(left.style.width.replace('%','')));
+    // //   left.style.width = Math.round(Number(left.style.width))+'%';
+      
+    // //   // console.log(Math.round(Number(left.style.width))*100+'%');
+    //   return;
+    // }
+    const sides_rect = sides.getBoundingClientRect();
+    // var p = e.clientX / innerWindow.width * 100;
+    var p = (e.clientX - sides_rect.left) / (sides_rect.right - sides_rect.left) * 100;
+    // console.log(sides_rect.top, sides_rect.bottom, sides_rect.left, sides_rect.right);
+    // console.log(e.clientX, e.clientY);
+    //if (e.clientY > sides_rect.top || e.clientY < sides_rect.bottom || e.clientX < sides_rect.left || e.clientX > sides_rect.right){return;};
+    if (p < 0.5){
+        p=0.0;
+    }
+    if (p > 99.5){
+        p=100;
+    }
+    left.style.width = p+'%';
+    console.log(p+'%');
+}
 
-	var	$window = $(window),
-		$body = $('body'),
-		$main = $('#main');
+document.onmousedown = e => {
+    handleOnClick(e);
+}
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '981px',   '1280px' ],
-			medium:   [ '737px',   '980px'  ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ '361px',   '480px'  ],
-			xxsmall:  [ null,      '360px'  ]
-		});
+document.onmousemove = e => {
+    handleOnMove(e);
+}
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+// document.ontouchmove = e => {
+//     handleOnMove(e);
+// }
 
-	// Nav.
-		var $nav = $('#nav');
 
-		if ($nav.length > 0) {
 
-			// Shrink effect.
-				$main
-					.scrollex({
-						mode: 'top',
-						enter: function() {
-							$nav.addClass('alt');
-						},
-						leave: function() {
-							$nav.removeClass('alt');
-						},
-					});
+let interval = null;
 
-			// Links.
-				var $nav_a = $nav.find('a');
-
-				$nav_a
-					.scrolly({
-						speed: 1000,
-						offset: function() { return $nav.height(); }
-					})
-					.on('click', function() {
-
-						var $this = $(this);
-
-						// External link? Bail.
-							if ($this.attr('href').charAt(0) != '#')
-								return;
-
-						// Deactivate all links.
-							$nav_a
-								.removeClass('active')
-								.removeClass('active-locked');
-
-						// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
-							$this
-								.addClass('active')
-								.addClass('active-locked');
-
-					})
-					.each(function() {
-
-						var	$this = $(this),
-							id = $this.attr('href'),
-							$section = $(id);
-
-						// No section for this link? Bail.
-							if ($section.length < 1)
-								return;
-
-						// Scrollex.
-							$section.scrollex({
-								mode: 'middle',
-								initialize: function() {
-
-									// Deactivate section.
-										if (browser.canUse('transition'))
-											$section.addClass('inactive');
-
-								},
-								enter: function() {
-
-									// Activate section.
-										$section.removeClass('inactive');
-
-									// No locked links? Deactivate all links and activate this section's one.
-										if ($nav_a.filter('.active-locked').length == 0) {
-
-											$nav_a.removeClass('active');
-											$this.addClass('active');
-
-										}
-
-									// Otherwise, if this section's link is the one that's locked, unlock it.
-										else if ($this.hasClass('active-locked'))
-											$this.removeClass('active-locked');
-
-								}
-							});
-
-					});
-
-		}
-
-	// Scrolly.
-		$('.scrolly').scrolly({
-			speed: 1000
-		});
-
-})(jQuery);
+document.getElementById("kwargs-link").onmouseover = event => {  
+  let iteration = 0;
+  
+  clearInterval(interval);
+  
+  interval = setInterval(() => {
+    event.target.innerText = event.target.innerText
+      .split("")
+      .map((letter, index) => {
+        if(index+1 < iteration) {
+          return event.target.dataset.value[index];
+        }
+      
+        return letters[Math.floor(Math.random() * 26)]
+      })
+      .join("");
+    
+    if(iteration >= event.target.dataset.value.length){ 
+      clearInterval(interval);
+    }
+    
+    iteration += 1 / 3;
+  }, 30);
+}
