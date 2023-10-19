@@ -10,12 +10,43 @@ a{
 ul{
     list-style: none;
 }
+
 body{
     margin: 0px;
     padding: 0px;
     font-family: poppins;
-}
+    background-color: lavenderblush;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-image: radial-gradient(
+        rgba(0,0,0,0.1) 9%,
+        transparent 9%
+    );
+    /* background-image: url("/assets/images/space.jpg"); */
+    background-size: 10vmin 10vmin;
+    animation: reverse-background-pan 30s infinite linear;
+    display: flex;
+    flex-direction: column;
 
+}
+@keyframes background-pan{
+    0% {
+        background-position: 0% 200%;
+      }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+@keyframes reverse-background-pan{
+    0% {
+        background-position: 0% 0%;
+      }
+
+    100% {
+        background-position: 0% 200%;
+    }
+}
 #blog{
     display: flex;
     justify-content: center;
@@ -102,8 +133,19 @@ body{
     color: #f33c3c;
     transition: ease-in 0.5s;
 }
+#kwargs{
+ 
+    align-self: center;
+    font-size: 5rem;
+}
+#kwargs >a{
+    color: grey;
+}
+#kwargs > a:hover{
+    color: limegreen;
+}
 
- @media(max-width:1250px){
+@media(max-width:1250px){
     .blog-box{
         width: 300px;
     }
