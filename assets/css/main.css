@@ -4,7 +4,7 @@
     --right-bg-color: #66999B;
     --nav-bg-color: #CAD2C5;
     --bot-bg-color: #202030;
-    --text-color: #3A3042;
+    --border-color: #3A3042;
     --text-color: #B47978;
 }
 body{
@@ -79,6 +79,8 @@ img{
     padding: none;
     margin: none;
     opacity: inherit;
+    padding-top: 2.5rem;
+    padding-bottom: 0.5rem;
 }
 .side{
     height: inherit;
@@ -98,6 +100,7 @@ img{
     z-index: 1;
 }
 .fancy{
+    padding-top: 2rem;
     font-size: 1.3em;
     line-height: 0.8em;
     color: white;
