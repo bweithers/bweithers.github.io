@@ -24,6 +24,11 @@ a{
     color: inherit;
     margin: auto;
 }
+a:hover{
+    color: yellowgreen;
+    text-decoration-style: dotted;
+    text-decoration: none;
+}
 h3, p{
     align-self: center;
 }
@@ -151,6 +156,9 @@ img{
     font-size: 1.75rem;
     color: sienna;
     align-self: center;
+}
+.blog-title:hover{
+    text-decoration-style: dotted;
 }
 .text-holder{
     width: 75%;
