@@ -115,3 +115,28 @@ document.getElementById("kwargs-link").onmouseleave = event => {
     iteration += 1 / 3;
   }, 30);
 }
+
+document.getElementById("kwargs-link").onload = event => {  
+  let iteration = 0;
+  clearInterval(interval);
+  
+  interval = setInterval(() => {
+    event.target.innerText = event.target.innerText.split("").map(
+      (letter, index) => {
+        if (letter == '.'){return '.'}
+        if(event.target.innerText.length - index + 1 < iteration) {
+          return letters[Math.floor(Math.random() * letters.length)]
+          
+        }
+
+        return event.target.dataset.value[index];
+      })
+      .join("");
+    
+    if(iteration > event.target.dataset.value.length + 1){ 
+      clearInterval(interval);
+    }
+    
+    iteration += 1 / 3;
+  }, 30);
+}
