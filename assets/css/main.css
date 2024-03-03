@@ -7,7 +7,9 @@
     --border-color: #3A3042;
     --text-color: #B47978;
 }
+
 body{
+    font-family: 'Bitter', serif;
     background-color: var(--main-bg-color);
     padding-left: 5%;
     padding-right: 5%;
