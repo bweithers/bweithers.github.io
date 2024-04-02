@@ -265,6 +265,7 @@ img{
     height: 2.5%;
     align-self: center;
     display: flex;
+    padding: 15px;
 }
 #kwargs > a{
     color: white;
