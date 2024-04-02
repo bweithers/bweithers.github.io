@@ -261,7 +261,7 @@ img{
 }
 #kwargs{
     border: 2px solid white;
-    border-radius: 3vw;
+    border-radius: 25dvw;
     height: 2.5%;
     align-self: center;
     display: flex;
