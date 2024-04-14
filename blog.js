@@ -1,5 +1,3 @@
-console.log('In the js file');
-
 // Function to filter articles based on selected tag
 function filterArticles(tag) {
     const articles = document.querySelectorAll('.post');
@@ -43,15 +41,21 @@ document.querySelectorAll('.tags-menu li').forEach(tagLink => {
       const selectedTag = this.getAttribute('data-tag');
       const isActive = this.getAttribute('data-active'); // Check if the tag is active
         
-      console.log(isActive);
+    //   console.log(isActive);
       // Toggle the active class
+      const link = this.querySelector('a');
       if (isActive == "yes") {
         this.setAttribute('data-active', 'no');
+        link.style.backgroundColor = '#f0f0f0';
+        link.style.color = 'black';
         filterArticles('all'); // Show all articles when tag is unclicked
       } else {
-        // Add active class to clicked tag link
         this.setAttribute('data-active', 'yes');
-        // console.log(this.getAttribute('active'));
+        // Select the link element inside the tag
+        
+        // Set the background color of the link to red (you can use any color)
+        link.style.backgroundColor = 'var(--left-bg-color)';
+        link.style.color = 'white';
         filterArticles(selectedTag); // Filter articles based on selected tag
       }
     });

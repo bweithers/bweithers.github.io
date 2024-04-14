@@ -154,18 +154,21 @@ body, h1, h2, h3, p, ul, li {
 
   
   
-  .tags li a {
+  .tags li {
     text-decoration: none;
     background-color: #f0f0f0;
     color: #333;
     padding: 5px 10px;
     border-radius: 8px;
+    user-select: none;
+    border: var(--left-bg-color) 1px solid;
+    border-radius: 8px;
+    transition: box-shadow 0.5s ease;
   }
   
-  .tags li a:hover {
-    color: white;
-    background-color: var(--left-bg-color);
-  }
+  .tags li:hover {
+  box-shadow: 5px 5px 10px 0px rgba(43,58,103, 0.75);
+}
 
 
   .tags-menu {
