@@ -87,13 +87,13 @@ body, h1, h2, h3, p, ul, li {
     list-style-type: none;
   }
   
-  .recent-posts ul li {
+  .post{
     margin-bottom: 10px;
     border-bottom: rgba(128, 128, 128,0.25) 2px dashed;
     padding-bottom: 10px;
   }
   
-  .recent-posts ul li a {
+  .post a {
     text-decoration: none;
     color: #333;
   }
@@ -117,8 +117,34 @@ body, h1, h2, h3, p, ul, li {
       
   .post-title {
     font-size: 24px; /* Adjust the font size as desired */
+    margin-bottom: 2px;
   }
   
   .publication-date {
     font-style: italic; /* Optionally, style the publication date */
   }
+
+  .tags {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+  }
+  
+  .tags li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .tags li a {
+    text-decoration: none;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 8px;
+  }
+  
+  .tags li a:hover {
+    text-decoration: underline;
+    background-color: #ccc;
+  }
+  
