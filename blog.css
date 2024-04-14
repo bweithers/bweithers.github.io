@@ -89,6 +89,8 @@ body, h1, h2, h3, p, ul, li {
   
   .recent-posts ul li {
     margin-bottom: 10px;
+    border-bottom: rgba(128, 128, 128,0.25) 2px dashed;
+    padding-bottom: 10px;
   }
   
   .recent-posts ul li a {
@@ -100,9 +102,19 @@ body, h1, h2, h3, p, ul, li {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
-    text-align: center;
+    text-align: left;
   }
-  
+  footer img{
+    width: 50px;
+    height: auto;
+    transition: box-shadow 0.5s ease;
+  }
+  footer img:hover{
+  /* Offset-x | Offset-y | Blur-radius | Spread-radius | Color */
+    box-shadow: 5px 5px 10px 0px rgba(255, 0, 0, 0.25); /* Red shadow with 50% opacity */
+
+}
+      
   .post-title {
     font-size: 24px; /* Adjust the font size as desired */
   }
