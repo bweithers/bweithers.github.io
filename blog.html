@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@87.5,700&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <header>
@@ -18,11 +19,11 @@
     <nav>
       <ul>
         <ul class="tags-menu">
-          <li class="tag"><a href="#">♞ Chess</a></li>
-          <li class="tag"><a href="#">⌨️ Coding</a></li>
-          <li class="tag"><a href="#">📊 Data</a></li>
-          <li class="tag"><a href="#">📰 Article</a></li>
-          <li class="tag"><a href="#">📚 Book</a></li>
+          <li class="tag" data-tag="Chess"><a href="#">♞ Chess</a></li>
+          <li class="tag" data-tag="Coding"><a href="#">⌨️ Coding</a></li>
+          <li class="tag" data-tag="Data"><a href="#">📊 Data</a></li>
+          <li class="tag" data-tag="Article"><a href="#">📰 Article</a></li>
+          <li class="tag" data-tag="Book"><a href="#">📚 Book</a></li>
           <!-- Add more tag categories as needed -->
         </ul>
       </ul>
@@ -46,11 +47,11 @@
           <h3 class="post-title"><a href="#">Post 1 Title</a></h3> <!-- Changed -->
           <p class="publication-date">April 13, 2024</p>
         </li>
-        <li class="post">
+        <li class="post" data-tags="Data">
           <h3 class="post-title"><a href="#">Post 2 Title</a></h3> <!-- Changed -->
           <p class="publication-date">April 12, 2024</p>
           <ul class="tags">
-            <li class="tag"><a href="#">Tag 1</a></li>
+            <li class="tag" data-tags="Data"><a href="#">Data</a></li>
             <li class="tag"><a href="#">Tag 2</a></li>
             <li class="tag"><a href="#">Tag 3</a></li>
           </ul>
@@ -71,7 +72,6 @@
       </ul>
     </nav>
   </footer>
-
-  <script src="script.js"></script>
 </body>
+<script src="blog.js"></script>
 </html>
