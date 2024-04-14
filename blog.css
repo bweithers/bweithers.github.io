@@ -1,3 +1,13 @@
+:root {
+    --main-bg-color: #AEB4A9;
+    --left-bg-color: #2B3A67;
+    --right-bg-color: #66999B;
+    --nav-bg-color: #CAD2C5;
+    --bot-bg-color: #202030;
+    --border-color: #3A3042;
+    --text-color: #B47978;
+}
+
 /* Reset some default styles */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
@@ -17,7 +27,7 @@ body, h1, h2, h3, p, ul, li {
   }
   
   header {
-    background-color: #333;
+    background-color: var(--main-bg-color);
     color: #fff;
     padding: 20px;
   }
@@ -35,8 +45,6 @@ body, h1, h2, h3, p, ul, li {
   }
   
   nav {
-    background-color: #333;
-    color: #fff;
     padding: 10px;
   }
   
@@ -108,7 +116,7 @@ body, h1, h2, h3, p, ul, li {
   }
   
   footer {
-    background-color: #333;
+    background-color: var(--main-bg-color);
     color: #fff;
     padding: 10px 20px;
     text-align: left;
@@ -143,6 +151,8 @@ body, h1, h2, h3, p, ul, li {
     display: inline;
     margin-right: 10px;
   }
+
+  
   
   .tags li a {
     text-decoration: none;
@@ -153,8 +163,8 @@ body, h1, h2, h3, p, ul, li {
   }
   
   .tags li a:hover {
-    text-decoration: underline;
-    background-color: #ccc;
+    color: white;
+    background-color: var(--left-bg-color);
   }
 
 
@@ -178,7 +188,8 @@ body, h1, h2, h3, p, ul, li {
   }
   
   .tags-menu li a:hover {
-    background-color: #ccc;
+    color: white;
+    background-color: var(--left-bg-color);
   }
   
   
@@ -191,4 +202,11 @@ body, h1, h2, h3, p, ul, li {
 
   .tag {
     font-family: "Open Sans";
+  }
+
+  .recent-posts h2 {
+    font-style: bolder;
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
   }
