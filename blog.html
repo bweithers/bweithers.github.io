@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Blog</title>
-  <link rel="stylesheet" href="blog.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
@@ -22,18 +22,27 @@
     <section class="featured">
       <h2>Featured Post</h2>
       <article>
-        <h3>Post Title</h3>
+        <h3 class="post-title"><a href="#">Post Title</a></h3> <!-- Changed -->
+        <p class="publication-date">Published on April 14, 2024</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam suscipit felis eu nisl faucibus, ac feugiat velit aliquam.</p>
-        <a href="#">Read More</a>
       </article>
     </section>
     
     <section class="recent-posts">
       <h2>Recent Posts</h2>
       <ul>
-        <li><a href="#">Post 1</a></li>
-        <li><a href="#">Post 2</a></li>
-        <li><a href="#">Post 3</a></li>
+        <li>
+          <h3 class="post-title"><a href="#">Post 1 Title</a></h3> <!-- Changed -->
+          <p class="publication-date">Published on April 13, 2024</p>
+        </li>
+        <li>
+          <h3 class="post-title"><a href="#">Post 2 Title</a></h3> <!-- Changed -->
+          <p class="publication-date">Published on April 12, 2024</p>
+        </li>
+        <li>
+          <h3 class="post-title"><a href="#">Post 3 Title</a></h3> <!-- Changed -->
+          <p class="publication-date">Published on April 11, 2024</p>
+        </li>
       </ul>
     </section>
   </main>
