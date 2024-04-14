@@ -17,6 +17,20 @@ body, h1, h2, h3, p, ul, li {
   header h1 {
     margin: 0;
   }
+    
+  .recent-posts ul {
+    list-style-type: none;
+  }
+
+  .recent-posts ul li {
+    margin-bottom: 10px;
+  }
+  
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
   
   nav ul {
     list-style-type: none;
@@ -89,3 +103,10 @@ body, h1, h2, h3, p, ul, li {
     text-align: center;
   }
   
+  .post-title {
+    font-size: 24px; /* Adjust the font size as desired */
+  }
+  
+  .publication-date {
+    font-style: italic; /* Optionally, style the publication date */
+  }
