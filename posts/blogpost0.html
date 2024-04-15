@@ -1,46 +1,49 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Brian Weithers Personal Website</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/assets/css/main.css"/>
-        <link rel="icon" type="image/x-icon" sizes="32x32" href="assets/images/favicon/favicon.ico">
-        <link rel="manifest" href="/site.webmanifest">
-        <script src="https://kit.fontawesome.com/5df66e4d6b.js" crossorigin="anonymous"></script>
-	</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Title</title>
+  <link rel="stylesheet" href="../blog.css"> 
+  <link rel="stylesheet" href="blogpost.css"> <!-- Link to your CSS file -->
+</head>
+<body>
 
-	<body>
-		<div id="center-pane">
-			<div id="kwargs">
-				<a href="/index.html" id="kwargs-link" data-value="KWARGS.CLICK">KWARGS.CLICK</a>
-			</div>
-            <br>
+  <div class="container">
+    <header>
+      <div id="page_title">
+        <a href="../blog.html"><h1>kwargs.click</h1></a>
+        <a href="https://docs.python.org/3/glossary.html#term-parameter">  
+          <h3 id="subtitle">Keyword Arguments</h3>
+        </a>
+      </div>
+      <div id="post_title">
+        <h1 id="post_title">Post Title</h1>
+        <p class="publication-date">Publication Date</p>
+      </div>
+      <ul class="tags">
+        <li class="tag" data-tag="Data">📊</li>
+        <li class="tag">Tag 2</li>
+        <li class="tag">Tag 3</li>
+      </ul>
+    </header>
 
-			<div class="blog-body">
-				<div class="blog-header">
-					<div class="blog-header-img"><img src="/assets/images/Brain.jpg" ></div>
-					<h3></h3>
-				</div>
-				<p class = "blog-post-text">I am becoming a member of the <i>Cult of Done</i>. Today I was inspired by a 
-					<a href="https://www.youtube.com/watch?v=bJQj1uKtnus">YouTube video</a> 
-					which underscored the value of being <i>done</i> with projects. It was a programmers' version of the saying I have heard about writing: "Forgive yourself for the first draft."
-					A lot of the code to overhaul my website from a boilerplate template into an interactive cool site was already written. I remember after doing a lot of that work I discovered
-					that the formatting that I had painstakingly laid out didn't work whenever the browser was resized. I was so discouraged I didn't pick the project up for a while. 
-					The video I watched today inspired me to just merge the new branch anyway. I will fix that issue later. Maybe. Or maybe I won't because it's not even important.
-					Blogpost0. Only up from here.
-				</p>
-			</div>
-				
-		</div>
-		<footer>
-			<p>Check me out in some other places!</p>
-			<a href="assets/resume.pdf" target="_blank"><img id="resume-img" src="assets/images/undraw_resume_re_hkth.svg"></a>
-			<a href="https://www.linkedin.com/in/brian-weithers/" target="_blank"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
-			<a href="https://github.com/bweithers" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
-		</footer>
-		</div>
-	</body>
+    <main>
+      <article>
+        <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a nisi eget ante viverra lacinia. Donec sit amet erat vel nisl sollicitudin dictum. Nulla facilisi. Mauris ut nunc in turpis sollicitudin commodo eu ac ex.</p>
+        <!-- Add more content as needed -->
+      </article>
+    </main>
+
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="https://github.com/yourusername"><img src="..\assets\images\gh_logo.png" alt="GitHub Logo"></a></li>
+          <li><a href="https://www.linkedin.com/in/yourusername"><img src="..\assets\images\linkedin_logo.png" alt="LinkedIn Logo"></a></li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+
+</body>
 </html>
-
-<script src="../assets/js/blogpost.js"></script>
