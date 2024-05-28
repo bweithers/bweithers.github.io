@@ -1,71 +1,80 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Brian Weithers Personal Website</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="main.css"/>
-        <link rel="icon" type="image/x-icon" sizes="32x32" href="assets/images/favicon/favicon.ico">
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
-		
-		<script src="https://kit.fontawesome.com/5df66e4d6b.js" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyword Arguments</title>
+  <link rel="stylesheet" href="blog.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@87.5,700&display=swap" rel="stylesheet">
 
-	</head>
+</head>
+<body>
+  <header>
+    <h1 id="kwargs-link" data-value="kwargs.click">kwargs.click</h1>
+    <a href="https://docs.python.org/3/glossary.html#term-parameter">  
+      <h3 id="subtitle">Keyword Arguments</h3>
+    </a>
+    <nav>
+      <ul>
+        <ul class="tags-menu">
+          <li class="tag" data-tag="Chess" data-active="no"><a href="#">♞ Chess</a></li>
+          <li class="tag" data-tag="Coding" data-active="no"><a href="#">⌨️ Coding</a></li>
+          <li class="tag" data-tag="Data" data-active="no"><a href="#">📊 Data</a></li>
+          <li class="tag" data-tag="Article" data-active="no"><a href="#">📰 Article</a></li>
+          <li class="tag" data-tag="Book" data-active="no"><a href="#">📚 Book</a></li>
+          <!-- Add more tag categories as needed -->
+        </ul>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="featured">
+      <h2>Featured Post</h2>
+      <article>
+        <h3 class="post-title"><a href="/posts/blogpost0.html">Post Title</a></h3> <!-- Changed -->
+        <p class="publication-date">April 14, 2024</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam suscipit felis eu nisl faucibus, ac feugiat velit aliquam.</p>
+      </article>
+    </section>
+    
+    <section class="recent-posts">
+      <h2>Recent Posts</h2>
+      <ul>
+        <li class="post">
+          <h3 class="post-title"><a href="#">Post 1 Title</a></h3> <!-- Changed -->
+          <p class="publication-date">April 13, 2024</p>
+        </li>
+        <li class="post" data-tags="Data">
+          <h3 class="post-title"><a href="#">Post 2 Title</a></h3> <!-- Changed -->
+          <p class="publication-date">April 12, 2024</p>
+          <ul class="tags">
+            <li class="tag" data-tag="Data">📊</li>
+            <li class="tag">Tag 2</li>
+            <li class="tag">Tag 3</li>
+          </ul>
+        </li>
+        <li class="post">
+          <h3 class="post-title"><a href="#">Post 3 Title</a></h3> <!-- Changed -->
+          <p class="publication-date">April 11, 2024</p>
+          <ul class="tags">
+            <li class="tag" data-tag="Data">📊</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </main>
 
-	<body>
-		<div id="center-pane">
-			<div id="kwargs">
-				<a href="#" id="kwargs-link" data-value="KWARGS.CLICK">KWARGS.CLICK</a>
-			</div>
-			<div id="sides">
-				<div id="left-side" class="side">
-					<h2 class="title">The expertise of a <span class="fancy">Data Scientist</span></h2>
-				</div>
-				<div id="right-side" class="side">
-					<h2 class="title">The horsepower of a <span class="fancy" id="right-fancy">Computer Scientist</span></h2>
-				</div>
-			</div>
-			<div class="bot-section" id="about-section">
-					<div class="bot-half" id="bot-left">
-						<div class="bot-header">
-							<h2>About</h2>
-						</div>
-						<div class="bot-body">
-							<div class="text-holder" id="about-text">
-								<p>Salutations! I am a data professional based out of the Chicago area. I love Maths and Computers using them to find elegant solutions to real world problems. I mostly use Python and SQL to perform data analysis and have worked with different visualization platforms like Microsoft PowerBI, Tableau. I love playing chess. <a href="https://lichess.org/@/BigBrainGambit" id="chess-link">Challenge me!</a></p>
-							</div>
-							<div id="screen">
-								<img src="/assets/images/Brain.jpg">
-							</div>
-						</div>
-					</div>
-					<div class="bot-half" id="bot-right">
-						<div class="bot-header">
-							<a href="blog.html" id="blog-link"><h2>Blog</h2></a>
-						</div>
-						<div class="blog-box">
-							<div class="blog-img">
-								<img src="assets/images/spike-monkey-typing.gif" alt="blogpic">
-							</div>
-			
-							<div class="blog-text">
-								<a href="/posts/blogpost0.html" class="blog-title">Cult of Done</a>
-								<p>You have to finish at some point. And today I was inspired to do so.</p>
-							</div>
-						</div>
-					</div>
-			</div>
-			<footer>
-				<p>Check me out in some other places!</p>
-				<a href="assets/resume.pdf" target="_blank"><img id="resume-img" src="assets/images/undraw_resume_re_hkth.svg"></a>
-				<a href="https://www.linkedin.com/in/brian-weithers/" target="_blank"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
-				<a href="https://github.com/bweithers" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
-			</footer>
-		</div>
-	</body>
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="https://github.com/yourusername"><img src="assets\images\gh_logo.png" alt="GitHub Logo"></a></li>
+        <li><a href="https://www.linkedin.com/in/yourusername"><img src="assets\images\linkedin_logo.png" alt="LinkedIn Logo"></a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+<script src="blog.js"></script>
 </html>
-
-<script src="assets/js/main.js"></script>
